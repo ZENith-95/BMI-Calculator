@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="bmi-calculator">
+        <h1>BMI Calculator</h1>
+        <p>
+          Get to know your BMI by entering basic details like age weight and
+          height
+        </p>
+        <div class="input-field">
+          <div class="gender field">
+            <input class="radio-input" type="radio" id="male" name="gender" value="male" required />
+            <label class="radio=label" for="male">Male</label>
+            <input
+            class="radio-input"
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              required />
+            <label class="radio-label" for="female">Female</label>
+          </div>
+
+          <div class="age field">
+            <input type="number" id="age" min="1" max="100" required />
+            <label class="placeholder" for="age">How old are you?</label>
+          </div>
+
+          <div class="height field">
+            <input type="number" id="height" min="50" max="250" required />
+            <label class="placeholder" for="height">What's your hieght in centimeters?</label>
+          </div>
+
+          <div class="weight field">
+            <input type="number" id="weight" min="1" max="500" required />
+            <label class="placeholder" for="weight">What's your weight in kilograms?</label>
+          </div>
+        </div>
+        <div class="submit-button">
+          <button onclick="calculateBMI()" id="calculate-btn">Calculate BMI</button>
+        </div>
+      </div>
+      <div id="bmi-result" class="bmi-result"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
