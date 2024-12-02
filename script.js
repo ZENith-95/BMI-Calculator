@@ -15,7 +15,7 @@ function calculateBMI() {
   }
 
   // to calculate the BMI
-  //divide weight in kg by the square of the hieght in meters
+  //divide weight in kg by the square of the hieght in meters 
   //BMI = weight(kg)/(height(m)^2)
 
   // changing  height in cm to meters
@@ -56,4 +56,6 @@ function calculateBMI() {
   displayResult();
 }
 
-// calculateBMI()
+function reset(){
+window.location.reload()
+}

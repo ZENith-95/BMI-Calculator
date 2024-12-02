@@ -52,15 +52,20 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   transition: background-color var(--transition-duration),
-    box-shadow var(--transition-duration);
+  box-shadow var(--transition-duration);
 }
 
 /* Heading styles */
 .bmi-calculator h1 {
   text-align: center;
+  font-size: 2.2rem;
   margin: 10px 0;
   font-family: abadon;
-  font-weight: 100;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2f0eea, #0669eb 51%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
 }
 
 .bmi-calculator p {
@@ -88,8 +93,8 @@ body {
 
 .field .placeholder {
   position: absolute;
-  top: 0.7rem;
-  left: 0.8rem;
+  bottom: 2.5rem;
+  /* left: 0.8rem; */
   color: var(--text-color-dark);
   font-size: 0.8rem;
   transition: var(--transition-duration);
@@ -99,7 +104,7 @@ body {
 .main .bmi-calculator .input-field .gender {
   display: inline-flex;
   overflow: hidden;
-  flex-direction: row;
+  flex-direction: row; 
   border-radius: 1rem;
   align-self: center;
 }
@@ -120,8 +125,6 @@ body {
 }
 
 .field input:focus + .placeholder {
-  top: -0.7rem;
-  background-color: var(--background-color-dark);
   color: var(--accent-color-dark);
 }
 
@@ -141,6 +144,14 @@ body {
   display: none;
 }
 
+#male + .radio-label:hover {
+  background: #68b1f5;
+}
+
+#male:checked + .radio-label {
+  background: rgb(2, 116, 247);
+}
+
 #female + .radio-label:hover {
   background: #bb86fc;
 }
@@ -151,6 +162,7 @@ body {
 
 /* Submit button */
 .submit-button button {
+  margin: .5rem 0;
   width: 100%;
   padding: 12px;
   border: none;
@@ -178,9 +190,10 @@ body {
 #bmi-result {
   background: #1f1f1f;
   color: #fff;
-  padding: 20px;
+  padding: 0 20px;
   border-radius: 10px;
   margin-top: 20px;
   text-align: center;
   transition-duration: 1s;
+  line-height: 1.3rem;
 }

@@ -16,10 +16,16 @@
         </p>
         <div class="input-field">
           <div class="gender field">
-            <input class="radio-input" type="radio" id="male" name="gender" value="male" required />
-            <label class="radio=label" for="male">Male</label>
             <input
-            class="radio-input"
+              class="radio-input"
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              required />
+            <label class="radio-label" for="male">Male</label>
+            <input
+              class="radio-input"
               type="radio"
               id="female"
               name="gender"
@@ -35,16 +41,23 @@
 
           <div class="height field">
             <input type="number" id="height" min="50" max="250" required />
-            <label class="placeholder" for="height">What's your hieght in centimeters?</label>
+            <label class="placeholder" for="height"
+              >What's your hieght in centimeters?</label
+            >
           </div>
 
           <div class="weight field">
             <input type="number" id="weight" min="1" max="500" required />
-            <label class="placeholder" for="weight">What's your weight in kilograms?</label>
+            <label class="placeholder" for="weight"
+              >What's your weight in kilograms?</label
+            >
           </div>
         </div>
         <div class="submit-button">
-          <button onclick="calculateBMI()" id="calculate-btn">Calculate BMI</button>
+          <button class="calculate" onclick="calculateBMI()" id="calculate-btn">
+            Calculate BMI
+          </button>
+          <button class="reset" onclick="reset()">Reset</button>
         </div>
       </div>
       <div id="bmi-result" class="bmi-result"></div>
